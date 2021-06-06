@@ -59,18 +59,15 @@ ul {
 }
 
 .scroll {
+  display: inline-block;
   position: fixed;
-  background-color: #ffb8ca;
-  right: 30px;
-  bottom: 25px;
-  transform: rotate(-90deg);
-  padding: 10px;
-  align-items: center;
-  border-radius: 50%;
-  cursor: pointer;
-  display: none;
-  text-align: center;
+  bottom: 0;
+  right: 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
   width: 40px;
   height: 40px;
-  box-shadow: 0 4px 8px rgb(0 0 0 / 15%);
+  background-color: #ffb8ca;
+  border-radius: 50%;
+  padding: 10px;
 }
