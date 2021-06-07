@@ -1,3 +1,111 @@
-<h1 class="hero__title">ice cream made with passion</h1>
+<!--Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur rerum aperiam, odit illo
+doloribus veniam officia temporibus soluta autem, modi tempora laboriosam? Dolorum animi dignissimos
+iure sunt odit dolor unde! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, impedit
+libero? Corrupti, dignissimos doloribus, ad consequuntur fuga placeat quam optio nulla quis quisquam
+minus illo quidem reiciendis saepe! Aliquid, voluptates!
 
-<img src="" alt="" />
+<h1 class="text">hello</h1>
+
+-->
+
+<section class="hero-header__section">
+  <div class="hero-header__container container" id="header">
+    <div class="girl__img"></div>
+    <div class="ice__img"></div>
+
+    <nav class="hero-header__navigation">
+      <div class="mob__box">
+        <a href="#header" class="logo__link link">
+          <img
+            srcset="./images/hero/logo@1x.png 1x, ./images/hero/logo@2x.png 2x"
+            src="./images/hero/logo@1x.png"
+            alt="logo"
+            class="logo__img"
+            width="200"
+          />
+        </a>
+        <button type="button" class="menu__button" data-menu-button aria-expanded="false">
+          <svg width="20" height="20" aria-label="Переключатель мобильного меню">
+            <use class="close__icon" href="./images/icons/symbol-defs.svg#icon-close">
+              <!-- из спрайта заменить icons -->
+            </use>
+            <use class="menu__icon" href="./images/icons/symbol-defs.svg#icon-Burger">
+              <!-- из спрайта заменить icons -->
+            </use>
+          </svg>
+        </button>
+        <button type="button" class="order-t__button" data-modal-open>
+          <span class="order__text">Buy now</span>
+          <svg width="8" height="10">
+            <use class="order__img" href="./images/icons/icons.svg#header-vector"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="btn__container" data-menu>
+        <button type="button" class="order__button">
+          <span class="order__text">Buy now</span>
+          <svg width="8" height="10">
+            <use class="order__img" href="./images/icons/icons.svg#header-vector">
+              <!-- из спрайта заменить icons -->
+            </use>
+          </svg>
+        </button>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#header" class="nav__link nav__link__link--current">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about-us" class="nav__link link">About us</a>
+          </li>
+          <li class="nav__item">
+            <a href="#made" class="nav__link link">How it’s made?</a>
+          </li>
+          <li class="nav__item">
+            <a href="#products" class="nav__link link"> Our products </a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacts" class="nav__link link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div>
+      <div class="hero">
+        <h1 class="hero__title">
+          <span class="hero__title--part">ice cream</span>
+          <span class="hero__title--part">made with</span>
+          <span class="hero__title--accent">passion</span>
+        </h1>
+        <a href="#products" class="product__button link">Products</a>
+        <a href="#made" class="made__button link">How it’s made?</a>
+      </div>
+      <div class="hero__bottom">
+        <div class="hero__content">
+          <p class="hero__item">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et
+          </p>
+          <a href="" class="hero__link link">
+            <svg width="8" height="8">
+              <use class="hero__icon" href="./images/icons/demo.jpg">
+                <!-- из спрайта заменить icons.svg#icon-right-arrow -->
+              </use>
+            </svg>
+          </a>
+        </div>
+
+        <ul class="number__list">
+          <li class="number_link">
+            <p class="number__item">16</p>
+            <p class="number__text">cafes</p>
+          </li>
+          <li class="number_link">
+            <p class="number__item">23</p>
+            <p class="number__text">food trucks</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
