@@ -1,0 +1,44 @@
+.buttun-red {
+  font-family: $hero-font;
+  font-size: 14px;
+  line-height: 1.28;
+  color: white;
+  background-color: $focus-color;
+  min-height: 40px;
+  border-radius: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  border: 0;
+  transition-property: background-color, transform, fill, color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    background-color: white;
+    color: $focus-color;
+    transform: scaleX(1.2) scaleY(1.4);
+  }
+  margin-right: 15px;
+}
+
+.buttun-white {
+  font-family: $hero-font;
+  font-size: 14px;
+  line-height: 1.28;
+  color: $focus-color;
+  background-color: white;
+  min-height: 40px;
+  padding-left: 35px;
+  padding-right: 35px;
+  border-radius: 20px;
+  border: 0;
+  transition-property: background-color, transform, fill, color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    background-color: $focus-color;
+    color: white;
+    transform: scaleX(1.2) scaleY(1.4);
+  }
+}

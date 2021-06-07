@@ -56,3 +56,17 @@ ul {
     padding-right: 115px;
   }
 }
+
+.scroll {
+  display: inline-block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #ffb8ca;
+  border-radius: 50%;
+  padding: 10px;
+}
