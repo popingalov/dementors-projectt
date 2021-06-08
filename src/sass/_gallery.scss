@@ -8,6 +8,15 @@
   display: block;
   width: 100%;
   border: 2px solid transparent;
+  opacity: 0.8;
+  transition-property: background-color, opacity, transform, color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    opacity: 1;
+    transform: scaleX(1.4) scaleY(1.4);
+  }
 }
 
 .gallery {
