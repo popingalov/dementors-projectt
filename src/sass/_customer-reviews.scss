@@ -24,6 +24,14 @@
 
 .slider {
   position: relative;
+  margin-bottom: 86px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 120px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 132px;
+  }
 }
 
 .slider__photo {
@@ -101,20 +109,37 @@
 .slider__comment-text {
   position: relative;
   font-weight: 500;
+  font-family: $hero-font;
   font-size: 12px;
   line-height: 2.55;
   text-align: center;
+  color: #000000;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 2.16;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.86;
+  }
 }
 
 .slider__name {
+  font-family: $hero-font;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.86;
   margin-bottom: 30px;
   text-align: center;
+  color: #000000;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 35px;
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
   }
 }
 
