@@ -1,0 +1,15 @@
+.gallery-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-img {
+  display: block;
+  width: 100%;
+  border: 2px solid transparent;
+}
+
+.gallery-container {
+  background: linear-gradient(to top, white 60%, $section-bg -40%);
+}
