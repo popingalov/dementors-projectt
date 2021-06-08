@@ -1,9 +1,17 @@
-:root {
-  --hero-font: 'DM Sans', sans-serif;
-  --glory-font: 'Titan One', sans-serif;
-  --focus-color: #d41342;
-  --title-color: #ffa5ba;
-  --hero-bg: #ffb8ca;
-  --section-bg: #fff5f6;
-  --modal-bg: #e17992;
-}
+$hero-font: 'DM Sans', sans-serif;
+$glory-font: 'Titan One', sans-serif;
+$focus-color: #d41443;
+$title-color: #ffa5ba;
+$hero-bg: #ffb8ca;
+$section-bg: #fff5f6;
+$modal-bg: #e17992;
+
+$text-color: #ffffff;
+$product-hover-bg: #c7133e;
+$btn-hover-bg: #ecebeb;
+$secondary-bg-color: #ffffff;
+
+$border-color: #e18298;
+
+$duration: 250ms;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);

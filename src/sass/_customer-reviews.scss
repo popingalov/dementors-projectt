@@ -1,4 +1,212 @@
-.test {
-  size: 40px;
-  color: midnightblue;
+.slider__container {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+    padding-left: 177px;
+    padding-right: 177px;
+  }
+}
+
+.slider {
+  position: relative;
+  margin-bottom: 86px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 120px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 132px;
+  }
+}
+
+.slider__photo {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 15px;
+  }
+}
+
+.slider__section-comment {
+  position: relative;
+  margin-bottom: 52px;
+  padding: 43px 50px 20px;
+  background: #fafafa;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    width: 54px;
+    height: 40px;
+    background-image: url(../images/customer-reviews/image.png);
+
+    @media screen and (min-width: 768px) {
+      top: 17px;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + 30px);
+    right: 50%;
+    transform: translate(50%);
+    width: 32px;
+    height: 4px;
+    background-image: url(../images/customer-reviews/group.svg);
+
+    @media screen and (min-width: 768px) {
+      top: calc(100% + 24px);
+    }
+    @media screen and (min-width: 768px) {
+      top: calc(100% + 15px);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 30px 40px;
+    margin-bottom: 42px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 30px 50px;
+    margin-bottom: 34px;
+  }
+}
+
+.slider__comment {
+  padding: 0 15px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 29px,
+    #e1e1e1 0px,
+    #e1e1e1 30px
+  );
+}
+
+.slider__comment-text {
+  position: relative;
+  font-weight: 500;
+  font-family: $hero-font;
+  font-size: 12px;
+  line-height: 2.55;
+  text-align: center;
+  color: #000000;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 2.16;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.86;
+  }
+}
+
+.slider__name {
+  font-family: $hero-font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #000000;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 35px;
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+  }
+}
+
+/* Слайдер */
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+/* Слайд */
+.slick-slide {
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.slick-arrow {
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+/* Точки (булиты) */
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slick-dots li {
+  font-size: 0;
+  margin: 0 9px;
+}
+/* Активная точка */
+.slick-dots li.slick-active button {
+  background-color: #d31342;
+}
+/* Элемент точки */
+.slick-dots li button {
+  border-style: none;
+  width: 12px;
+  height: 12px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
 }
