@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 20px;
 }
 
 .gallery-img {
@@ -12,13 +13,24 @@
   transition-property: background-color, opacity, transform, color;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation: shake 1.7s linear alternate-reverse infinite;
+  animation: shake 1.7s linear alternate-reverse infinite;
   &:focus,
   &:hover {
     opacity: 1;
     transform: scaleX(1.4) scaleY(1.4);
   }
 }
-
+@-webkit-keyframes shake {
+  100% {
+    transform: translateY(20px);
+  }
+}
+@keyframes shake {
+  100% {
+    transform: translateX(20px);
+  }
+}
 .gallery {
   background: linear-gradient(to top, white 60%, $section-bg -40%);
 }
