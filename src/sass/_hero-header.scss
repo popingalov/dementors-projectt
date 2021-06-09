@@ -93,6 +93,9 @@
 }
 
 .girl__img {
+  &:focus,
+  &:hover {
+  }
   opacity: 1;
   /*анимация*/
 
