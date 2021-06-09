@@ -18,11 +18,13 @@
 
   @media screen and (min-width: 1280px) {
     padding-bottom: 310px;
-    max-width: 1600px;
   }
 }
 
 .advantages__list {
+  @media screen and (max-width: 768px) {
+    margin-top: -38px;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     margin-right: -60px;

@@ -1,4 +1,92 @@
+.about {
+  background-color: $section-bg;
+  padding-top: 125px;
+  padding-bottom: 36px;
+  background-image: url(../images/about/sectionbg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom 100px;
+}
+
+.about__lable {
+  font-family: $glory-font;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: $title-color;
+  margin-bottom: 15px;
+}
+
 .about__title {
-  color: red;
-  border: 1px solid green;
+  font-family: $glory-font;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+  color: $focus-color;
+  margin-bottom: 26px;
+}
+
+.about__img {
+  margin-bottom: 46px;
+}
+
+.about__list {
+  margin-bottom: -47px;
+}
+
+.about__item {
+  margin-bottom: 47px;
+  text-align: center;
+}
+
+.about__text {
+  font-family: $hero-font;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.58;
+  color: #000000;
+
+  &--color {
+    color: inherit;
+  }
+}
+
+.about__button {
+  position: relative;
+  padding: 10px 51px 10px 37px;
+  background-color: $secondary-bg-color;
+  border-radius: 22px;
+  border: none;
+
+  font-family: $hero-font;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.29;
+  color: $focus-color;
+
+  &:hover,
+  &:focus {
+    background-color: $focus-color;
+    color: $secondary-bg-color;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    background-image: url(../images/about/Vector-button.svg);
+    background-repeat: no-repeat;
+    display: inline-flex;
+    stroke: #ffffff;
+    width: 10px;
+    height: 10px;
+  }
+
+  .about__item &::after:hover,
+  .about__item &::after:focus {
+    fill: $secondary-bg-color;
+  }
 }
