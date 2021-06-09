@@ -1,9 +1,19 @@
 .footer__section {
   background-color: $section-bg;
 }
-.footer__flex-cont {
+
+.footer {
+  padding-top: 43px;
+  padding-bottom: 43px;
+  @media screen and (min-width: 1280px) {
+    padding-top: 97px;
+    padding-bottom: 97px;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
+    justify-content: space-between;
+    padding-top: 91px;
+    padding-bottom: 91px;
   }
 }
 .footer__heder-first {
@@ -35,7 +45,6 @@
 }
 .footer__heder-second {
   margin-top: 0;
-  margin-bottom: 43px;
   width: 200px;
   height: 76px;
   font-family: Titan One;
@@ -49,7 +58,6 @@
   @media screen and (min-width: 768px) {
     width: 340px;
     height: 110px;
-    margin-bottom: 91px;
     font-size: 48px;
     line-height: 1.145;
     letter-spacing: 0.06em;
@@ -57,7 +65,6 @@
   @media screen and (min-width: 1280px) {
     width: 480px;
     height: 66px;
-    margin-bottom: 97px;
     font-size: 58px;
     line-height: 1.137;
     letter-spacing: 0.06em;
@@ -69,9 +76,6 @@
   justify-content: flex-end;
 }
 .footer__social-box {
-  @media screen and (min-width: 768px) {
-    margin-left: auto;
-  }
 }
 .footer__link {
   display: flex;
@@ -119,7 +123,7 @@
   height: 22px;
   margin-left: auto;
   margin-top: 46px;
-  margin-bottom: 43px;
+
   font-style: normal;
   font-weight: 700;
   font-size: 12px;

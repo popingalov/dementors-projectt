@@ -1,5 +1,5 @@
 body {
-  font-family: var(--hero-font);
+  font-family: DM Sans, sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.94;
@@ -39,6 +39,10 @@ ul {
 
 .container {
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 20px;
   padding-right: 20px;
   @media screen and (min-width: 480px) {
@@ -69,4 +73,12 @@ ul {
   background-color: #ffb8ca;
   border-radius: 50%;
   padding: 10px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }

@@ -51,9 +51,16 @@
   background-image: url('../images/hero/ice-m@1x.png');
   background-repeat: no-repeat;
   background-size: contain;
-  z-index: 2;
-  opacity: 0;
-  /*добавить анимацию*/
+  z-index: 10;
+  opacity: 1;
+
+  /* animation-name: icecreamAppear;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: forwards;
+  animation-delay: 250ms; добавить анимацию*/
 
   @media screen and (min-width: 768px) {
     top: 63px;
@@ -86,7 +93,7 @@
 }
 
 .girl__img {
-  opacity: 0;
+  opacity: 1;
   /*анимация*/
 
   @media screen and (min-width: 768px) {
@@ -144,7 +151,7 @@
 .order-t__button {
   cursor: pointer;
   opacity: 1;
-  /*animation-name: animateOrderBtn;
+  animation-name: animateOrderBtn;
   animation-duration: 1000ms;
   animation-iteration-count: 1;
   animation-direction: normal;
@@ -160,7 +167,7 @@
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     animation-fill-mode: forwards;
     animation-delay: 3500ms;
-  }*/
+  }
 }
 
 .menu__button {
@@ -176,7 +183,7 @@
   margin: 0;
   padding: 0;
   border: none;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(196, 9, 9, 0.03);
   z-index: 30;
   @media screen and (min-width: 768px) {
     position: absolute;
@@ -197,17 +204,26 @@
 .menu__button .close__icon {
   display: none;
 }
+
 .menu__button.is-open + .order-t__button {
   @media screen and (min-width: 768px) and (max-width: 1280px) {
     display: none;
   }
 }
-.menu__button.is-open .close__icon {
+
+.menu__button .is-open .close__icon {
   display: block;
 }
 
-.menu__button.is-open .menu__icon {
+.menu__button .is-open .menu__icon {
   display: none;
+}
+
+.close__icon {
+  fill: $focus-color;
+}
+.menu__icon {
+  fill: $focus-color;
 }
 
 .btn__container {
@@ -218,15 +234,21 @@
   min-height: 100vh;
   height: 100%;
   background-color: $modal-bg;
-  z-index: 29;
+  z-index: 25;
   display: none;
 
   @media screen and (min-width: 768px) {
     width: 254px;
   }
-  /* @media screen and (max-width: 1280px) {
-
-  }  добавить анимацию*/
+  @media screen and (max-width: 1280px) {
+    animation-name: openMobileMenu;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+  } /**/
   @media screen and (min-width: 1280px) {
     position: relative;
     display: block;
@@ -235,10 +257,11 @@
     min-height: 70px;
     background-color: transparent;
   }
-  &.is-open {
-    display: block;
-    overflow: visible;
-  }
+}
+
+.btn__container.is-open {
+  display: block;
+  overflow: visible;
 }
 
 .order__button {
@@ -281,7 +304,7 @@
     border: none;
     background-color: $secondary-bg-color;
     z-index: 13;
-    transition: background-color var(--duration) var(--timing-function);
+    transition: background-color $duration $timing-function;
     &:hover,
     &:focus {
       background-color: $btn-hover-bg;
@@ -300,7 +323,7 @@
   line-height: 1.31;
 }
 .order__img {
-  background: transparent;
+  fill: $focus-color;
 }
 
 /*NAV*/
@@ -368,7 +391,7 @@
   }
   &__title {
     margin: 0;
-    font-family: var(--hero-font);
+    font-family: $glory-font;
     font-style: normal;
     font-weight: normal;
     text-transform: uppercase;
@@ -421,7 +444,7 @@
   font-size: 8px;
   line-height: 1.25;
   background-color: $focus-color;
-  transition: background-color var(--duration) var(--timing-function);
+  transition: background-color $duration $timing-function;
 
   @media screen and (min-width: 1280px) {
     margin-top: 25px;
@@ -454,7 +477,7 @@
   font-size: 8px;
   line-height: 1.25;
   background-color: $secondary-bg-color;
-  transition: background-color var(--duration) var(--timing-function);
+  transition: background-color $duration $timing-function;
 
   @media screen and (min-width: 1280px) {
     margin-top: 25px;
@@ -495,6 +518,7 @@
 }
 
 .hero__item {
+  font-family: $hero-font;
   color: $text-color;
   font-size: 8px;
   line-height: 1.5;
@@ -536,6 +560,7 @@
 }
 
 .hero__link {
+  position: relative; /*?*/
   display: block;
   width: 18px;
   height: 18px;
@@ -550,6 +575,20 @@
     width: 26px;
     height: 26px;
     margin-top: 20px;
+  }
+}
+
+.hero__icon {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 5px;
+  right: 5px;
+  @media screen and (min-width: 1280px) {
+    width: 10px;
+    height: 10px;
+    top: 8px;
+    right: 8px;
   }
 }
 
@@ -569,7 +608,7 @@
 .number__link {
   position: relative;
   text-align: right;
-  z-index: 20;
+  z-index: 1; /*20*/
 }
 .number__link:not(:last-child) {
   padding-bottom: 13px;
@@ -579,13 +618,14 @@
 }
 
 .number__link::after {
-  position: absolute;
-  content: '';
-
   z-index: -1;
+  position: absolute;
 
+  content: '';
+  display: inline-block;
   top: -2px;
   right: -10px;
+
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -598,10 +638,9 @@
     height: 30px;
   }
 }
-
 .number__item {
   color: $focus-color;
-  font-family: $hero-font;
+  font-family: $glory-font;
   font-weight: normal;
   font-size: 28px;
   line-height: 1.14;
@@ -613,7 +652,6 @@
     line-height: 1.15;
   }
 }
-
 .number__text {
   color: $text-color;
   font-family: $hero-font;
@@ -633,13 +671,15 @@
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 110;
+  z-index: 2;
+  overflow-y: scroll;
+  opacity: 1;
 
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   background-image: linear-gradient(to right, rgba(184, 114, 114, 0.4), rgba(184, 114, 114, 0.4)),
-    url(../images/hero/milk@1x.png);
+    url(../images/hero/girl@1x.png);
 
   padding-left: 15px;
   padding-right: 15px;
@@ -648,9 +688,6 @@
     padding-top: 90px;
   }
 
-  overflow-y: scroll;
-
-  opacity: 1;
   background-color: rgba(184, 114, 114, 0.884);
 
   transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -658,7 +695,7 @@
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0s;
-  z-index: 25;
+  z-index: 100;
 }
 
 .backdrop.is-hidden {
@@ -675,12 +712,13 @@
   width: 100%;
   max-width: 450px;
   padding: 40px;
-  border-radius: 22px;
+  border-radius: 25px;
 
   background-repeat: no-repeat;
   background-position: center right 30px;
   background-size: contain;
   background-color: #f7ebee;
+  border: thick double $focus-color;
 
   background-image: url(../images/hero/milk@1x.png);
 
@@ -703,7 +741,7 @@
 
   @media screen and (min-width: 1280px) {
     position: absolute;
-    max-width: 528px;
+    max-width: 600px;
     left: 50%;
     top: 50%;
 
@@ -727,27 +765,27 @@
   width: 30px;
   height: 30px;
   color: black;
+
   border: 1px solid transparent;
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
-
-  &:hover,
-  &:focus {
-    color: $focus-color;
-  }
 }
+/*.modal__close-btn:hover,
+.modal__close-btn:focus {
+  fill: black;
+}
+*/
 
 .modal__close-icon {
-  fill: currentColor;
+  fill: $focus-color;
 }
 
 /*form*/
-.modal-form__title {
+.form__title {
   margin: 0 0 12px;
 
-  // color: $titleTextColor;
-  color: $focus-color; // !!!!!!!!!!!!!!!
+  color: $product-hover-bg;
 
   font-family: $glory-font;
   font-weight: 700;
@@ -757,19 +795,22 @@
   letter-spacing: 0.03em;
 }
 
-.modal-form__moto {
+.form__moto {
+  color: #000000;
+  font-family: $hero-font;
   text-align: center;
   padding-bottom: 10px;
 }
 
-.modal-form {
+.form {
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
 
-.modal-form__label {
+.form__label {
   display: block;
+  font-family: $hero-font;
   width: 100%;
   margin-bottom: 10px;
 
@@ -782,24 +823,23 @@
   }
 }
 
-.modal-form__caption {
+.form__caption {
   display: inline-block;
   margin-bottom: 4px;
-
-  color: #70001c;
-  // color: $primaryTextColor;
-
+  color: $focus-color;
   font-weight: 700;
+  font-style: $hero-font;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
 
-.modal-form__input {
+.form__input {
   position: relative;
+  font-family: $hero-font;
 }
 
-.modal-form__icon {
+.form__icon {
   position: absolute;
   left: 12px;
   bottom: 6px;
@@ -809,12 +849,12 @@
   transform: translateY(-50%);
   /*@include transitionMain(fill);*/
 
-  .modal-form__label:focus-within & {
+  .form__label:focus-within & {
     fill: $focus-color;
   }
 }
 
-.modal-form__field {
+.form__field {
   display: block;
   width: 100%;
   height: 40px;
@@ -850,18 +890,17 @@
     line-height: 1.17;
   }
 
-  .modal-form__label:focus-within & {
+  .form__label:focus-within & {
     border-color: $focus-color;
   }
 }
 
-.modal-form__licence-declaration {
+.form__licence-declaration {
   position: relative;
   margin-bottom: 30px;
   padding-left: 24px;
-
   color: black;
-
+  font-family: $hero-font;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
@@ -888,16 +927,16 @@
     /* @include transitionMain(border-color);*/
   }
 
-  .modal-form__checkbox:checked + &::before {
+  .form__checkbox:checked + &::before {
     border-color: $focus-color;
     background-color: $focus-color;
     background-position: center;
     background-size: contain;
     background-origin: border-box;
-    background-image: url(../images/icons/icons.svg#icon-check);
+    background-image: url(../images/hero/check.svg);
   }
 
-  .modal-form__checkbox:focus + &::before {
+  .form__checkbox:focus + &::before {
     border-color: $focus-color;
   }
 
@@ -906,7 +945,7 @@
   }
 }
 
-.modal-form__licence-link {
+.form__licence-link {
   color: $focus-color;
   text-decoration: underline;
 }

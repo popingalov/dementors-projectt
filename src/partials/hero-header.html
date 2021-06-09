@@ -16,8 +16,8 @@
         </a>
         <button type="button" class="menu__button" data-menu-button aria-expanded="false">
           <svg width="20" height="20" aria-label="Переключатель мобильного меню">
-            <use class="close__icon" href="./images/icons/icons.svg#icon-close-mobile"></use>
-            <use class="menu__icon" href="./images/icons/icons.svg#icon-menu"></use>
+            <use class="close__icon" href="./images/hero/Burger.svg"></use>
+            <use class="menu__icon" href="./images/hero/close.svg"></use>
           </svg>
         </button>
         <button type="button" class="order-t__button" data-modal-open>
@@ -71,18 +71,18 @@
             incididunt ut labore et
           </p>
           <a href="" class="hero__link link">
-            <svg width="8" height="8">
-              <use class="hero__icon" href="./images/icons/icons.svg#icon-right-arrow"></use>
+            <svg class="hero__icon" width="8" height="8">
+              <use href="./images/icons/icons.svg#icon-right-arrow"></use>
             </svg>
           </a>
         </div>
 
         <ul class="number__list">
-          <li class="number_link">
+          <li class="number__link">
             <p class="number__item">16</p>
             <p class="number__text">cafes</p>
           </li>
-          <li class="number_link">
+          <li class="number__link">
             <p class="number__item">23</p>
             <p class="number__text">food trucks</p>
           </li>
@@ -100,44 +100,44 @@
 <!-- Modal -->
 <div class="backdrop is-hidden" data-modal>
   <div class="modal">
-    <form class="modal-form">
-      <p class="modal-form__title">Do you want to taste the most delicious ice cream?</p>
-      <p class="modal-form__moto">Fill out the order form and we will call you back</p>
-      <div class="modal-form__input">
-        <label class="modal-form__label">
-          <span class="modal-form__caption">Name</span>
+    <form class="form">
+      <p class="form__title">LEAVE AN APPLICATION</p>
+      <p class="form__moto">and we will contact you shortly</p>
+      <div class="form__input">
+        <label class="form__label">
+          <span class="form__caption">Name</span>
 
-          <svg class="modal-form__icon" width="23" height="23">
+          <svg class="form__icon" width="23" height="23">
             <use href="./images/icons/icons.svg#icon-person"></use>
           </svg>
-          <input type="text" name="name" class="modal-form__field" />
+          <input type="text" name="name" class="form__field" />
         </label>
       </div>
-      <div class="modal-form__input">
-        <label class="modal-form__label">
-          <span class="modal-form__caption">Phone</span>
+      <div class="form__input">
+        <label class="form__label">
+          <span class="form__caption">Phone</span>
 
-          <svg class="modal-form__icon" width="23" height="23">
+          <svg class="form__icon" width="23" height="23">
             <use href="./images/icons/icons.svg#icon-phone"></use>
           </svg>
-          <input type="tel" name="tel" class="modal-form__field" />
+          <input type="tel" name="tel" class="form__field" />
         </label>
       </div>
-      <div class="modal-form__input">
-        <label class="modal-form__label">
-          <span class="modal-form__caption">E-mail</span>
+      <div class="form__input">
+        <label class="form__label">
+          <span class="form__caption">E-mail</span>
 
-          <svg class="modal-form__icon" width="23" height="23">
+          <svg class="form__icon" width="23" height="23">
             <use href="./images/icons/icons.svg#icon-email"></use>
           </svg>
-          <input type="email" name="email" class="modal-form__field" />
+          <input type="email" name="email" class="form__field" />
         </label>
       </div>
-      <label class="modal-form__label">
-        <span class="modal-form__caption">Comments</span>
+      <label class="form__label">
+        <span class="form__caption">Comments</span>
         <textarea
           name="comment"
-          class="modal-form__field modal-form__field--comment"
+          class="form__field form__field--comment"
           rows="6"
           placeholder="Leave your comments here"
         ></textarea>
@@ -146,12 +146,12 @@
       <input
         type="checkbox"
         name="licence"
-        class="modal-form__checkbox visually-hidden"
+        class="form__checkbox visually-hidden"
         id="licence-checkbox"
       />
-      <label class="modal-form__licence-declaration" for="licence-checkbox">
-        I accept
-        <a href="##" class="modal-form__licence-link link"> the License agreement</a>
+      <label class="form__licence-declaration" for="licence-checkbox">
+        I agree to the processing of personal data in accordance with
+        <a href="##" class="form__licence-link link"> Privacy Policy</a>
       </label>
 
       <button class="main-button modal__submit-btn button-glitter" type="submit">Submit</button>
