@@ -72,21 +72,27 @@
     color: $secondary-bg-color;
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    background-image: url(../images/about/Vector-button.svg);
-    background-repeat: no-repeat;
-    display: inline-flex;
-    stroke: #ffffff;
-    width: 10px;
-    height: 10px;
-  }
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   right: 20px;
+  //   top: 15px;
+  //   background-image: url(../images/about/Vector-button.svg);
+  //   background-repeat: no-repeat;
+  //   display: inline-flex;
+  //   stroke: #ffffff;
+  //   width: 10px;
+  //   height: 10px;
+  // }
 
-  .about__item &::after:hover,
-  .about__item &::after:focus {
-    fill: $secondary-bg-color;
-  }
+  // .about__item &::after:hover,
+  // .about__item &::after:focus {
+  //   fill: $secondary-bg-color;
+  // }
+}
+
+.about__icon {
+  fill: red;
+  width: 50px;
+  height: 50px;
 }
