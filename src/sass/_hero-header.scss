@@ -54,13 +54,7 @@
   z-index: 10;
   opacity: 1;
 
-  /* animation-name: icecreamAppear;
-  animation-duration: 1000ms;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-fill-mode: forwards;
-  animation-delay: 250ms; добавить анимацию*/
+  /* добавить анимацию*/
 
   @media screen and (min-width: 768px) {
     top: 63px;
@@ -139,6 +133,18 @@
   position: absolute;
   top: 6px;
   left: 0;
+  /*transition-property: <свойство>
+transition-duration: <время>
+transition-timing-function: <функция распределения времени>
+transition-delay: <задержка>*/
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    transform: scaleX(1.1) scaleY(1) scaleX(1.1);
+  }
+
   @media screen and (min-width: 768px) {
     top: 37px;
   }
@@ -151,23 +157,7 @@
 .order-t__button {
   cursor: pointer;
   opacity: 1;
-  animation-name: animateOrderBtn;
-  animation-duration: 1000ms;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-fill-mode: forwards;
-  animation-delay: 2250ms;
-
-  &::before {
-    animation-name: animateBtnGlitter;
-    animation-duration: 1000ms;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    animation-fill-mode: forwards;
-    animation-delay: 3500ms;
-  }
+  /*animation*/
 }
 
 .menu__button {
@@ -183,8 +173,8 @@
   margin: 0;
   padding: 0;
   border: none;
-  background-color: rgba(196, 9, 9, 0.03);
-  z-index: 30;
+  background-color: rgba(0, 0, 0, 0.03);
+  z-index: 35;
   @media screen and (min-width: 768px) {
     position: absolute;
     top: 47px;
@@ -201,11 +191,12 @@
     }
   }
 }
+
 .menu__button .close__icon {
   display: none;
 }
 
-.menu__button.is-open + .order-t__button {
+.menu__button .is-open + .order-t__button {
   @media screen and (min-width: 768px) and (max-width: 1280px) {
     display: none;
   }
@@ -236,19 +227,18 @@
   background-color: $modal-bg;
   z-index: 25;
   display: none;
+  /*
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;*/
 
   @media screen and (min-width: 768px) {
     width: 254px;
   }
   @media screen and (max-width: 1280px) {
-    animation-name: openMobileMenu;
-    animation-duration: 500ms;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    animation-fill-mode: forwards;
-    animation-delay: 0s;
-  } /**/
+  }
+
   @media screen and (min-width: 1280px) {
     position: relative;
     display: block;
@@ -269,23 +259,92 @@
   justify-content: center;
   align-items: center;
   margin: 60px auto 0 auto;
-  width: 210px;
+  /*width: 210px;
   height: 44px;
   border-radius: 22px;
   border: none;
-  background-color: $secondary-bg-color;
-  transition: background-color var(--duration) var(--timing-function);
+  background-color: $secondary-bg-color;*/
+  min-width: 210px;
+  min-height: 44px;
+  font-family: $hero-font;
+  font-size: 16px;
 
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #e03e9d;
+  background: #ffffff;
+  background: linear-gradient(90deg, rgb(236, 230, 234) 0%, rgb(243, 235, 240) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(243, 133, 214, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  &::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(210px + 12px);
+    min-height: calc(44px + 12px);
+    border: 6px solid #f896e5;
+    box-shadow: 0 0 44px rgba(177, 84, 157, 0.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  &:hover,
+  &:focus {
+    color: #df6fba;
+    transform: translateY(-6px);
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 1;
+  }
+
+  &::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #f0e0e9;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    animation: none;
+    display: none;
+  }
+
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
   @media screen and (min-width: 768px) {
     width: 186px;
   }
   @media screen and (min-width: 1280px) {
     display: none;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: $btn-hover-bg;
   }
 }
 
@@ -358,17 +417,18 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 1.29;
-  transition: color var(--duration) var(--timing-function);
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    color: $focus-color;
+  }
 
   @media screen and (min-width: 1280px) {
     font-size: 16px;
     line-height: 1.31;
   }
-}
-
-.nav__link:hover,
-.nav__link:focus {
-  color: $focus-color;
 }
 
 .nav__link--current {
@@ -444,7 +504,16 @@
   font-size: 8px;
   line-height: 1.25;
   background-color: $focus-color;
-  transition: background-color $duration $timing-function;
+
+  transition-property: background-color, transform, fill, color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    background-color: white;
+    color: $focus-color;
+    transform: scaleX(1.2) scaleY(1.4);
+  }
 
   @media screen and (min-width: 1280px) {
     margin-top: 25px;
@@ -455,10 +524,6 @@
     font-size: 14px;
     line-height: 1.29;
   }
-}
-.product__button:hover,
-.product__button:focus {
-  background-color: $product-hover-bg;
 }
 
 .made__button {
@@ -477,7 +542,16 @@
   font-size: 8px;
   line-height: 1.25;
   background-color: $secondary-bg-color;
-  transition: background-color $duration $timing-function;
+
+  transition-property: background-color, transform, fill, color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    background-color: $focus-color;
+    color: white;
+    transform: scaleX(1.2) scaleY(1.4);
+  }
 
   @media screen and (min-width: 1280px) {
     margin-top: 25px;
@@ -489,10 +563,6 @@
     font-size: 14px;
     line-height: 1.29;
   }
-}
-.made__button:hover,
-.made__button:focus {
-  background-color: $btn-hover-bg;
 }
 
 /*HERO  milk*/
@@ -571,6 +641,17 @@
 
   justify-content: center;
   align-items: center;
+
+  transition-property: background-color, transform, fill, color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    background-color: $focus-color;
+    fill: white;
+    transform: scaleX(1.5) scaleY(1.5);
+  }
+
   @media screen and (min-width: 1280px) {
     width: 26px;
     height: 26px;
@@ -768,13 +849,16 @@
 
   border: 1px solid transparent;
   border-radius: 50%;
+
   background-color: transparent;
   cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: black;
+  }
 }
-/*.modal__close-btn:hover,
-.modal__close-btn:focus {
-  fill: black;
-}
+
+/*
 */
 
 .modal__close-icon {
@@ -847,7 +931,7 @@
   fill: rgba(0, 0, 0, 0.6);
 
   transform: translateY(-50%);
-  /*@include transitionMain(fill);*/
+  /*transition (fill);*/
 
   .form__label:focus-within & {
     fill: $focus-color;
@@ -862,11 +946,10 @@
 
   background-color: rgba(253, 252, 252, 0.7);
 
-  // border: 1px solid $borderInputColor;
-  border: 2px solid rgba(0, 0, 0, 0.5); // !!!!!!!!!!!!!!!
+  border: 2px solid rgba(0, 0, 0, 0.5);
   border-radius: 4px;
-  // color: $titleTextColor;
-  color: black; // !!!!!!!!!!!!!!!
+
+  color: black;
   outline: transparent;
 
   font-weight: 700;
@@ -874,7 +957,7 @@
   line-height: 1.14;
   letter-spacing: 0.01em;
 
-  /*@include transitionMain(border-color);*/
+  /*transition(border-color);*/
 
   &--comment {
     height: auto;
@@ -883,9 +966,7 @@
   }
 
   &--comment::placeholder {
-    // color: $modalPlaceholderTextColor;
-    color: rgba(0, 0, 0, 0.7); // !!!!!!!!!!!!!!!
-
+    color: rgba(0, 0, 0, 0.7);
     font-size: 14px;
     line-height: 1.17;
   }
@@ -922,9 +1003,9 @@
 
     border-radius: 2px;
 
-    border: 2px solid black; // !!!!!!!!!!!!!!!
+    border: 2px solid black;
 
-    /* @include transitionMain(border-color);*/
+    /*transition(border-color);*/
   }
 
   .form__checkbox:checked + &::before {
@@ -961,12 +1042,20 @@
   border-radius: 22px;
   border: none;
   cursor: pointer;
-
-  background: $focus-color;
-  color: #ffffff;
-
   font-family: $hero-font;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.31;
+  background: $focus-color;
+  color: $text-color;
+  transition-property: background-color, transform, color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    background-color: $hero-bg;
+    color: $focus-color;
+
+    transform: scaleX(1.2) scaleY(1.4);
+  }
 }
