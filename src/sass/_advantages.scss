@@ -18,11 +18,13 @@
 
   @media screen and (min-width: 1280px) {
     padding-bottom: 310px;
-    max-width: 1600px;
   }
 }
 
 .advantages__list {
+  @media screen and (max-width: 768px) {
+    margin-top: -38px;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     margin-right: -60px;
@@ -69,6 +71,11 @@
   }
 }
 
+.advantages__title--icon {
+  @media screen and (max-width: 767px) {
+  }
+}
+
 .advantages__title--icon-ice::before {
   content: '';
   display: block;
@@ -77,6 +84,14 @@
   background-image: url(../images/advantages/icon-icecrem.png);
   background-repeat: no-repeat;
   margin-bottom: 16px;
+
+  @media screen and (min-width: 767px) {
+    margin-bottom: 36px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 40px;
+  }
 }
 
 .advantages__title--icon-fruit::before {
@@ -86,7 +101,15 @@
   height: 50px;
   background-image: url(../images/advantages/icon-fruit.png);
   background-repeat: no-repeat;
-  margin-bottom: 36px;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: 767px) {
+    margin-bottom: 36px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 40px;
+  }
 }
 
 .advantages__title--icon-heard::before {
@@ -96,7 +119,15 @@
   height: 50px;
   background-image: url(../images/advantages/icon-heard.png);
   background-repeat: no-repeat;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: 767px) {
+    margin-bottom: 36px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 40px;
+  }
 }
 
 .advantages__text {
