@@ -28,13 +28,17 @@
   color: $focus-color;
   background-color: white;
   min-height: 40px;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 18px;
+  padding-right: 18px;
   border-radius: 20px;
   border: 0;
   transition-property: background-color, transform, fill, color;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 768px) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
   &:focus,
   &:hover {
     background-color: $focus-color;
