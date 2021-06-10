@@ -56,9 +56,9 @@
   /* добавить анимацию*/
   transition: all 3s ease;
   &:hover {
-    -webkit-transform: rotateZ(-1000deg);
-    -ms-transform: rotateZ(-1000deg);
-    transform: rotateZ(-1000deg);
+    -webkit-transform: rotateZ(-1080deg);
+    -ms-transform: rotateZ(-1080deg);
+    transform: rotateZ(-1080deg);
   }
 
   @media screen and (min-width: 768px) {
@@ -264,7 +264,6 @@ transition-delay: <задержка>*/
   display: block;
   overflow: visible;
 }
-
 
 .order__button {
   display: flex;
@@ -702,7 +701,34 @@ transition-delay: <задержка>*/
   position: relative;
   text-align: right;
   z-index: 1; /*20*/
+
+  animation: pulsing 2s infinite;
 }
+
+@-webkit-keyframes pulsing {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0.5, 0.5);
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0.5, 0.5);
+  }
+}
+
 .number__link:not(:last-child) {
   padding-bottom: 13px;
   @media screen and (min-width: 1280px) {
@@ -1073,8 +1099,7 @@ transition-delay: <задержка>*/
 }
 
 .is-open {
-   @media screen and (max-width: 1279.98px) {
-   transform: translateX(100%);
+  @media screen and (max-width: 1279.98px) {
+    transform: translateX(100%);
   }
-
 }
