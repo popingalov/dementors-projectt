@@ -189,6 +189,12 @@ transition-delay: <задержка>*/
 
 /*buy now*/
 
+.is-open {
+  @media screen and (max-width: 1279.98px) {
+    transform: translateX(100%);
+  }
+}
+
 .menu__button {
   position: fixed;
   top: 20px;
@@ -202,29 +208,25 @@ transition-delay: <задержка>*/
   z-index: 35;
 
   &.is-open {
+    position: absolute;
     top: 20px;
-    right: 20px;
+    right: 28px;
   }
   @media screen and (min-width: 768px) {
     position: absolute;
     top: 47px;
     right: 190px;
+
+    &.is-open {
+      position: absolute;
+      top: 23px;
+      right: 34px;
+    }
   }
   @media screen and (min-width: 1280px) {
     display: none;
   }
-  &.is-open {
-    @media screen and (min-width: 768px) {
-      position: fixed;
-      top: 100px;
-      right: 20px;
-    }
-  }
 }
-
-// .menu__button .close__icon {
-//   display: none;
-// }
 
 .menu__button .is-open + .order-t__button {
   @media screen and (min-width: 768px) and (max-width: 1280px) {
@@ -232,12 +234,16 @@ transition-delay: <задержка>*/
   }
 }
 
-// .menu__button.is-open .close__icon {
-//   display: block;
-// }
+.menu__button .close__icon {
+  display: none;
+}
 
 .menu__button.is-open .menu__icon {
   display: none;
+}
+
+.menu__button.is-open .close__icon {
+  display: block;
 }
 
 .close__icon {
@@ -1126,11 +1132,5 @@ transition-delay: <задержка>*/
     color: $focus-color;
 
     transform: scaleX(1.2) scaleY(1.4);
-  }
-}
-
-.is-open {
-  @media screen and (max-width: 1279.98px) {
-    transform: translateX(100%);
   }
 }
