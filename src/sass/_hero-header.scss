@@ -226,7 +226,10 @@ transition-delay: <задержка>*/
   height: 100%;
   background-color: $modal-bg;
   z-index: 25;
-  display: none;
+  transition-property: background-color, transform, fill, color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  /* display: none; */
   /*
   height: 100%;
   display: flex;
@@ -253,6 +256,7 @@ transition-delay: <задержка>*/
   display: block;
   overflow: visible;
 }
+
 
 .order__button {
   display: flex;
@@ -1058,4 +1062,11 @@ transition-delay: <задержка>*/
 
     transform: scaleX(1.2) scaleY(1.4);
   }
+}
+
+.is-open {
+   @media screen and (max-width: 1279.98px) {
+   transform: translateX(100%);
+  }
+
 }
