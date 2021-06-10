@@ -1,6 +1,6 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
+    openModalBtn: document.querySelector('.order-t__button'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
     modal: document.querySelector('[data-modal]'),
   };
@@ -13,12 +13,12 @@
   }
 })();
 
-/*
+
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[data-modal-openn]'),
-    closeModalBtn: document.querySelector('[data-modal-closee]'),
-    modal: document.querySelector('[data-modall]'),
+    openModalBtn: document.querySelector('.order__button'),
+    closeModalBtn: document.querySelector('.modal__close-btnn'),
+    modal: document.querySelector('[data-modal]'),
   };
 
   refs.openModalBtn.addEventListener('click', toggleModal);
@@ -28,4 +28,3 @@
     refs.modal.classList.toggle('is-hidden');
   }
 })();
-*/

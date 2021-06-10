@@ -6,13 +6,8 @@
     <nav class="hero-header__navigation">
       <div class="mob__box">
         <a href="#header" class="logo__link link">
-          <img
-            srcset="./images/hero/logo@1x.png 1x, ./images/hero/logo@2x.png 2x"
-            src="./images/hero/logo@1x.png"
-            alt="logo"
-            class="logo__img"
-            width="200"
-          />
+          <img srcset="./images/hero/logo@1x.png 1x, ./images/hero/logo@2x.png 2x" src="./images/hero/logo@1x.png"
+            alt="logo" class="logo__img" width="200" />
         </a>
         <button type="button" class="menu__button" data-menu-button aria-expanded="false">
           <svg width="20" height="20" aria-label="Переключатель мобильного меню">
@@ -28,7 +23,7 @@
         </button>
       </div>
       <div class="btn__container is-open" data-menu>
-        <button type="button" class="order__button">
+        <button type="button" class="order__button" data-modal-openn>
           <span class="order__text">Buy now</span>
           <svg width="8" height="10">
             <use class="order__img" href="./images/icons/icons.svg#icon-header-vector"></use>
@@ -135,20 +130,11 @@
       </div>
       <label class="form__label">
         <span class="form__caption">Comments</span>
-        <textarea
-          name="comment"
-          class="form__field form__field--comment"
-          rows="6"
-          placeholder="Leave your comments here"
-        ></textarea>
+        <textarea name="comment" class="form__field form__field--comment" rows="6"
+          placeholder="Leave your comments here"></textarea>
       </label>
 
-      <input
-        type="checkbox"
-        name="licence"
-        class="form__checkbox visually-hidden"
-        id="licence-checkbox"
-      />
+      <input type="checkbox" name="licence" class="form__checkbox visually-hidden" id="licence-checkbox" />
       <label class="form__licence-declaration" for="licence-checkbox">
         I agree to the processing of personal data in accordance with
         <a href="##" class="form__licence-link link"> Privacy Policy</a>
@@ -201,20 +187,11 @@
         </div>
         <label class="form__label">
           <span class="form__caption">Comments</span>
-          <textarea
-            name="comment"
-            class="form__field form__field--comment"
-            rows="6"
-            placeholder="Leave your comments here"
-          ></textarea>
+          <textarea name="comment" class="form__field form__field--comment" rows="6"
+            placeholder="Leave your comments here"></textarea>
         </label>
 
-        <input
-          type="checkbox"
-          name="licence"
-          class="form__checkbox visually-hidden"
-          id="licence-checkbox"
-        />
+        <input type="checkbox" name="licence" class="form__checkbox visually-hidden" id="licence-checkbox" />
         <label class="form__licence-declaration" for="licence-checkbox">
           I agree to the processing of personal data in accordance with
           <a href="##" class="form__licence-link link"> Privacy Policy</a>
@@ -222,7 +199,7 @@
 
         <button class="main-button modal__submit-btn button-glitter" type="submit">Submit</button>
 
-        <button class="modal__close-btn" type="button" data-modal-closee>
+        <button class="modal__close-btnn" type="button" data-modal-close>
           <svg class="modal__close-icon" width="18" height="18">
             <use href="./images/icons/icons.svg#icon-close-modal"></use>
           </svg>
@@ -230,4 +207,3 @@
       </form>
     </div>
   </div>
-</div>
