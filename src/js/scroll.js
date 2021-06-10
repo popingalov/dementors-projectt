@@ -1,15 +1,15 @@
-$(function() {
-   $('.scrollup').click(function() {
-        $("html, body").animate({
-      scrollTop:0
-    },500);
+$(function () {
+  $('.scrollup').click(function () {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 750);
   })
 })
-$(window).scroll(function() {
-  if ($(this).scrollTop()>500) {
-        $('.scrollup').fadeIn();
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 500) {
+    $('.scrollup').fadeIn();
   }
-   else {
+  else {
     $('.scrollup').fadeOut();
   }
 });
