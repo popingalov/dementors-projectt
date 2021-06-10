@@ -12,6 +12,12 @@
   padding-bottom: 145px;
   background-color: $section-bg;
 
+.container {
+   @media screen and (min-width: 768px) and (max-width: 1279.98px) {
+    padding-right: 76px;
+  }
+}
+
   @media screen and (min-width: 768px) {
     padding-bottom: 246px;
     padding-top: 37px;
@@ -29,8 +35,7 @@
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     display: flex;
     margin-right: -60px;
-    padding-right: 41px;
-  }
+    }
 
   @media screen and (min-width: 1280px) {
     display: flex;
@@ -44,8 +49,7 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
-    flex-basis: calc((100% - 60px * 2) / 3);
-    margin-right: 60px;
+        margin-right: 60px;
   }
 
   @media screen and (min-width: 1280px) {
