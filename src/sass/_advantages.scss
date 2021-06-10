@@ -14,6 +14,7 @@
 
   @media screen and (min-width: 768px) {
     padding-bottom: 246px;
+    padding-top: 37px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -25,12 +26,14 @@
   @media screen and (max-width: 768px) {
     margin-top: -38px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     display: flex;
     margin-right: -60px;
+    padding-right: 41px;
   }
 
   @media screen and (min-width: 1280px) {
+    display: flex;
     margin-right: -30px;
   }
 }

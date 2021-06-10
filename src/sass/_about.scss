@@ -85,7 +85,8 @@
 .about__list {
   @media screen and (max-width: 767px) {
     margin-bottom: -47px;
-    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   @media screen and (min-width: 768px) {
@@ -139,10 +140,12 @@
 
 .about__button {
   position: relative;
-  padding: 10px 51px 10px 37px;
+  padding: 10px 37px;
   background-color: $secondary-bg-color;
   border-radius: 22px;
   border: none;
+  cursor: pointer;
+  transition: $duration $timing-function;
 
   font-family: $hero-font;
   font-weight: bold;
@@ -155,17 +158,17 @@
     background-color: $focus-color;
     color: $secondary-bg-color;
   }
+}
 
-  &::after {
-    content: '';
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    background-image: url(../images/about/Vector-button.svg);
-    background-repeat: no-repeat;
-    display: inline-flex;
-    stroke: #ffffff;
-    width: 10px;
-    height: 10px;
-  }
+.about__icon {
+  width: 10px;
+  height: 10px;
+  margin-left: 14px;
+  vertical-align: middle;
+  stroke: $focus-color;
+}
+
+.about__button:hover .about__icon,
+.about__button:focus .about__icon {
+  stroke: #ffffff;
 }
