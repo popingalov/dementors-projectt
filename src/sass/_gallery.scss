@@ -32,5 +32,17 @@
   }
 }
 .gallery {
+  padding-bottom: 80px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 121px;
+  }
   background: linear-gradient(to top, white 60%, $section-bg -40%);
+}
+
+.gallery--fix {
+  max-width: 50%;
+}
+
+.gallery-section-five  {
+  padding-bottom: 7%;
 }
