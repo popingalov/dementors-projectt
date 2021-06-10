@@ -197,18 +197,19 @@ transition-delay: <задержка>*/
 .menu__button {
   position: fixed;
   top: 20px;
-  right: 28px;
+  right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 5px;
-  margin: 0;
-  padding: 0;
   border: none;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: transparent;
+  cursor: pointer;
   z-index: 35;
+
+  &.is-open {
+    top: 20px;
+    right: 20px;
+  }
   @media screen and (min-width: 768px) {
     position: absolute;
     top: 47px;
@@ -220,15 +221,15 @@ transition-delay: <задержка>*/
   &.is-open {
     @media screen and (min-width: 768px) {
       position: fixed;
-      top: 20px;
+      top: 100px;
       right: 20px;
     }
   }
 }
 
-.menu__button .close__icon {
-  display: none;
-}
+// .menu__button .close__icon {
+//   display: none;
+// }
 
 .menu__button .is-open + .order-t__button {
   @media screen and (min-width: 768px) and (max-width: 1280px) {
@@ -236,19 +237,19 @@ transition-delay: <задержка>*/
   }
 }
 
-.menu__button .is-open .close__icon {
-  display: block;
-}
+// .menu__button.is-open .close__icon {
+//   display: block;
+// }
 
-.menu__button .is-open .menu__icon {
+.menu__button.is-open .menu__icon {
   display: none;
 }
 
 .close__icon {
-  fill: $focus-color;
+  stroke: $text-color;
 }
 .menu__icon {
-  fill: $focus-color;
+  stroke: $focus-color;
 }
 
 .btn__container {
