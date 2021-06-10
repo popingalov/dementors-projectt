@@ -61,7 +61,7 @@
     transform: rotateZ(-1080deg);
   }*/
 
-  animation: pulsing 2s infinite;
+  animation: pulsing 5s infinite;
 
   @-webkit-keyframes pulsing {
     0% {
@@ -188,11 +188,6 @@ transition-delay: <задержка>*/
 }
 
 /*buy now*/
-.order-t__button {
-  cursor: pointer;
-  opacity: 1;
-  /*animation*/
-}
 
 .menu__button {
   position: fixed;
@@ -384,10 +379,14 @@ transition-delay: <задержка>*/
     display: none;
   }
 }
-
+.order-t__button {
+  cursor: pointer;
+  opacity: 1;
+  /*animation*/
+}
 .order-t__button {
   display: none;
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     position: absolute;
     display: flex;
     justify-content: center;
