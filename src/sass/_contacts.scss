@@ -204,10 +204,6 @@
   }
 }
 
-.contacts__button-icon {
-  margin-left: 10px;
-}
-
 .button-red {
   padding: 12px 17px;
   stroke: $secondary-bg-color;
@@ -234,6 +230,20 @@
   }
 }
 
+.contacts__button-icon {
+  margin-left: 10px;
+
+  .button-white:hover &,
+  .button-white:focus & {
+    stroke: $secondary-bg-color;
+  }
+
+  .button-red:hover &,
+  .button-red:focus & {
+    stroke: $focus-color;
+  }
+}
+
 // Backdrop
 .backdrop-contact {
   position: fixed;
@@ -243,10 +253,19 @@
   height: 100%;
   z-index: 101;
   opacity: 1;
-  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity $duration $timing-function;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
   overflow-y: scroll;
 }
+
+.backdrop-contact.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+// .backdrop-contact.is-hidden .modal-contact {
+//   transform: translate(-50%, -150%);
+// }
 
 .modal-contact {
   width: 80%;

@@ -145,7 +145,7 @@
   border-radius: 22px;
   border: none;
   cursor: pointer;
-  transition: $duration $timing-function;
+  transition: 500ms $timing-function;
 
   font-family: $hero-font;
   font-weight: bold;
@@ -157,6 +157,7 @@
   &:focus {
     background-color: $focus-color;
     color: $secondary-bg-color;
+    transform: scaleX(1.2) scaleY(1.4);
   }
 }
 
