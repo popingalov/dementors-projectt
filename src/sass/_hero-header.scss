@@ -53,12 +53,38 @@
   background-size: contain;
   z-index: 10;
   opacity: 1;
-  /* добавить анимацию*/
+  /* добавить анимацию
   transition: all 3s ease;
   &:hover {
     -webkit-transform: rotateZ(-1080deg);
     -ms-transform: rotateZ(-1080deg);
     transform: rotateZ(-1080deg);
+  }*/
+
+  animation: pulsing 2s infinite;
+
+  @-webkit-keyframes pulsing {
+    0% {
+      transform: scale(0.8, 0.8);
+    }
+    50% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(0.8, 0.8);
+    }
+  }
+
+  @keyframes pulsing {
+    0% {
+      transform: scale(0.8, 0.8);
+    }
+    50% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(0.8, 0.8);
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -901,6 +927,11 @@ transition-delay: <задержка>*/
 
 .modal__close-icon {
   fill: $focus-color;
+  transition: $duration $timing-function;
+  &:hover,
+  &:focus {
+    fill: black;
+  }
 }
 
 /*form*/
@@ -970,7 +1001,7 @@ transition-delay: <задержка>*/
 
   transform: translateY(-50%);
   /*transition (fill);*/
-
+  transition: $duration $timing-function;
   .form__label:focus-within & {
     fill: $focus-color;
   }
