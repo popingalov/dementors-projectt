@@ -207,9 +207,9 @@
     right: 190px;
 
     &.is-open {
-      position: absolute;
+      position: fixed;
       top: 23px;
-      right: 34px;
+      right: 50px;
     }
   }
   @media screen and (min-width: 1280px) {
