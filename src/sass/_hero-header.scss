@@ -197,9 +197,9 @@
   z-index: 35;
 
   &.is-open {
-    position: absolute;
+    position: fixed;
     top: 20px;
-    right: 28px;
+    right: 50px;
   }
   @media screen and (min-width: 768px) {
     position: absolute;
